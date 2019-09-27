@@ -138,7 +138,7 @@ export const recalculateTranslatePosition = (state = {}) => {
 export const calculateSlidesOffset = (props, state) => {
   const { items, infinite } = state
   const offset = infinite && Utils.isStagePadding(props) ? 1 : 0
-  return items + offset
+  return Math.round(items + offset)
 }
 
 export const getIndexForItemHeightCalculation = (currentIndex, slidesOffset) => {
